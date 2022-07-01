@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{
+    min-height: 100vh;
+    box-sizing: border-box;
+    ;
+    display: flex;
+    /*	background-color: lightgreen;*/
+}
+
+#site 
+{
+    flex: 1;
+    /*	background-color: lightblue;*/
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana;
+    font-size: 14px;
+}
+
+#site header 
+{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+}
+
+#site header .header-phone {
+    flex: 1;
+}
+
+
+
+#site .menu 
+{
+    display: flex;
+    background-color: lightgray;
+    padding: 10px 20px;
+}
+
+#site .menu .menu-logo 
+{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    /*background-color: yellow;*/
+}
+
+#site .menu .menu-logo span 
+{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+#site .menu .menu-items 
+{
+    display: flex;
+    flex: 8;
+}
+
+#site .menu .menu-items ul 
+{
+    list-style-type: none;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#site .menu .menu-items ul li 
+{
+    margin-left: 20px;
+}
+
+#site .menu .menu-items ul a 
+{
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+#site .menu .menu-items ul a:hover 
+{
+    border-bottom: 2px orange solid;
+}
+
+#site footer 
+{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#site .mobile-menu 
+{
+    background-color: black;
+    color: white;
+    padding: 15px 12%;
+    display: none;
+}
+
+#site .mobile-menu-header 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+}
+
+#site .mobile-menu-header-text 
+{
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+#site .mobile-menu-items 
+{
+    background-color: white;
+    height: 0;
+    transition: height .5s;
+    /*не працює з довжиною auto  має бути числове значення того ми шукаємо довжину в JS*/
+    overflow: hidden;
+}
+
+/*#site .mobile-menu-items.height 
+{
+	height: 297px;
+}*/
+
+#site .mobile-menu-items ul 
+{
+    list-style-type: none;
+}
+
+#site .mobile-menu-items ul li 
+{
+    padding: 12px 30px;
+    border-bottom: 1px gray solid;
+}
+
+#site .mobile-menu-items ul li:last-child 
+{
+    border-bottom: none;
+}
+
+#site .mobile-menu-items ul li a 
+{
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+#site .mobile-menu-items ul li:hover a 
+{
+    color: orange;
+}
+
+@media(max-width:950px) 
+{
+    #site .menu .menu-items 
+    {
+        display: none;
+    }
+
+    #site .mobile-menu 
+    {
+        display: block;
+    }
+}
+
+@media(max-width: 640px) 
+{
+    #site header
+    {
+        justify-content: center;
+    }
+
+    #site header .header-phone 
+    {
+        display: none;
+    }
+
+    #site .menu 
+    {
+        flex-direction: column;
+    }
+
+    #site .menu .menu-logo 
+    {
+        align-self: center;
+    }
+}
+
+
+@media(max-width: 360px) 
+{
+    #site .menu 
+    {
+        padding: 10px 2px;
+    }
+}
+
+/*#site .slider 
+{
+	background-color: yellow;
+	width: 50%;
+	align-self: center;
+	position: relative;
+	overflow: hidden;
+}*/
+
+.aboutme-list 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.aboutme 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 20px;
+    border: 1px lightgray solid;
+    border-top: none;
+    background-color: rgb(60, 66, 95);
+    height: 380px;
+    width: 320px;
+    
+}
+
+.aboutme-image img 
+{
+    margin-top: 7px;
+    width: 300px;
+    height: 200px;
+    transform: rotate(7deg);
+    opacity: 0.8;
+}
+
+.aboutme-info 
+{
+    margin-top: 0;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+/*    border: 1px lightgray solid;*/
+    box-sizing: border-box;
+}
+
+.aboutme-info > * 
+{
+    margin: 5px 0;
+}
+
+.aboutme-tittle a 
+{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.aboutme-category a 
+{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.aboutme-rating a 
+{
+    color: orange;
+}
+
+.aboutme-list h6
+{
+    margin: 20px;
+    text-align: center;
+    width: 600px;
+}
+
+.content 
+{
+    height:100%;
+    text-align: center;
+    padding: 50px;
+}
+
+.work_info
+{
+    text-align: left;
+}
+
+.IaH img
+{
+    width: 600px;
+}
+
+.S_N
+{
+    justify-content: start;
+}
+
